@@ -22,6 +22,7 @@ val accumulate_to_db  : qualified_name -> Elpi.API.Ast.Loc.t * string -> Names.I
 val skip : atts:(Str.regexp list option * Str.regexp list option) -> ('a -> unit) -> 'a -> unit
 
 (* Setup *)
+val load_coercions : unit
 val load_checker : string -> unit
 val load_printer : string -> unit
 val load_tactic : string -> unit
