@@ -855,6 +855,7 @@ let skip ~atts:(skip,only) f x =
   in
     if exec then f x else ()
 
-let load_coercions =
+let load_coercions () =
+  print_string "Spara!";
+  Coercion.set_f (fun x -> print_int x; x);
   ()
-
