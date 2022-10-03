@@ -63,8 +63,6 @@ From elpi.apps.derive Extra Dependency "param1_trivial.elpi" as param1_trivial.
 From elpi.apps.derive Extra Dependency "invert.elpi" as invert.
 From elpi.apps.derive Extra Dependency "idx2inv.elpi" as idx2inv.
 From elpi.apps.derive Extra Dependency "induction.elpi" as induction.
-From elpi.apps.derive Extra Dependency "injection.elpi" as injection.
-From elpi.apps.derive Extra Dependency "bcongr.elpi" as bcongr.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
 
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
@@ -80,7 +78,6 @@ From elpi.apps Require Export
   derive.invert
   derive.idx2inv
   derive.induction
-  derive.bcongr
   derive.param2
 .
 
@@ -119,10 +116,6 @@ Elpi Accumulate File idx2inv.
 
 Elpi Accumulate Db derive.induction.db.
 Elpi Accumulate File induction.
-
-Elpi Accumulate Db derive.bcongr.db.
-Elpi Accumulate File injection.
-Elpi Accumulate File bcongr.
 
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.
