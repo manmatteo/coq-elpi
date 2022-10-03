@@ -22,9 +22,6 @@ dep1 "eq_param1" "eq".
 dep1 "fields" "tag".
 dep1 "fields" "eqType_ast".
 dep1 "eqb" "fields".
-dep1 "eqbcorrect" "eqb".
-dep1 "eqbcorrect" "induction".
-dep1 "eqbcorrect" "param1_inhab".
 
 derivation T Prefix (derive "isK"            (derive.isK.main T                      N     )) :- N is Prefix ^ "isk_".
 derivation T Prefix (derive "projK"          (derive.projK.main T                    N     )) :- N is Prefix ^ "getk_".
@@ -47,7 +44,6 @@ derivation T Prefix (derive "tag"            (derive.tag.main T                 
 derivation T _      (derive "eqType_ast"     (derive.eqType.ast.main T               )).
 derivation T Prefix (derive "fields"         (derive.fields.main T                   Prefix)).
 derivation T Prefix (derive "eqb"            (derive.eqb.main T                      Prefix)).
-derivation T Prefix (derive "eqbcorrect"     (derive.eqbcorrect.main T               Prefix)).
 
 namespace derive {
 
