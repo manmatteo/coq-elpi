@@ -67,7 +67,6 @@ From elpi.apps.derive Extra Dependency "injection.elpi" as injection.
 From elpi.apps.derive Extra Dependency "bcongr.elpi" as bcongr.
 From elpi.apps.derive Extra Dependency "discriminate.elpi" as discriminate.
 From elpi.apps.derive Extra Dependency "eqK.elpi" as eqK.
-From elpi.apps.derive Extra Dependency "eqcorrect.elpi" as eqcorrect.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
 
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
@@ -85,7 +84,6 @@ From elpi.apps Require Export
   derive.induction
   derive.bcongr
   derive.eqK
-  derive.eqcorrect
   derive.param2
 .
 
@@ -132,9 +130,6 @@ Elpi Accumulate File bcongr.
 Elpi Accumulate Db derive.eqK.db.
 Elpi Accumulate File discriminate.
 Elpi Accumulate File eqK.
-
-Elpi Accumulate Db derive.eqcorrect.db.
-Elpi Accumulate File eqcorrect.
 
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.

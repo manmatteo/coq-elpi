@@ -7,9 +7,6 @@ dep1 "param1_trivial" "param1_congr".
 dep1 "param1_congr" "param1".
 dep1 "param1_trivial" "param1".
 dep1 "param1_functor" "param1".
-dep1 "eqcorrect" "induction".
-dep1 "eqcorrect" "eq".
-dep1 "eqcorrect" "eqK".
 dep1 "induction" "param1_functor".
 dep1 "induction" "param1_functor".
 dep1 "eqK" "bcongr".
@@ -30,7 +27,6 @@ derivation T Prefix (derive "eq"             (derive.eq.main T                  
 derivation T Prefix (derive "eq_param1"      (derive.on_eq T (x\derive.param1.main (const x)) N     )) :- N is Prefix ^ "param1_".
 derivation T Prefix (derive "bcongr"         (derive.bcongr.main T                   N     )) :- N is Prefix ^ "bcongr_".
 derivation T Prefix (derive "eqK"            (derive.eqK.main T                      N     )) :- N is Prefix ^ "eq_axiom_".
-derivation T Prefix (derive "eqcorrect"      (derive.eqcorrect.main T                N     )) :- N is Prefix ^ "eq_correct".
 derivation T Prefix (derive "param2"         (derive.param2.main (indt T)            N     )) :- N is Prefix ^ "_R".
 derivation T Prefix (derive "invert"         (derive.invert.main T                   N     )) :- N is Prefix ^ "inv".
 derivation T _      (derive "idx2inv"        (derive.idx2inv.main T                  "_to_")).
