@@ -8,6 +8,7 @@ From elpi.apps Require Import
   derive.map
   derive.lens
   derive.lens_laws
+  derive.fields
   derive.eqb
   derive.eqbcorrect
 .
