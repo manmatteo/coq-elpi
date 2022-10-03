@@ -71,9 +71,6 @@ From elpi.apps.derive Extra Dependency "eqcorrect.elpi" as eqcorrect.
 From elpi.apps.derive Extra Dependency "eqOK.elpi" as eqOK.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
 
-From elpi.apps.derive Extra Dependency "tag.elpi" as tag.
-From elpi.apps.derive Extra Dependency "eqType.elpi" as eqType.
-
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
 From elpi.apps.derive Extra Dependency "derive.elpi" as derive.
 
@@ -92,8 +89,6 @@ From elpi.apps Require Export
   derive.eqcorrect
   derive.eqOK
   derive.param2
-  derive.eqb_core_defs
-  derive.tag
 .
 
 Elpi Command derive.
@@ -147,12 +142,6 @@ Elpi Accumulate File eqOK.
 
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.
-
-Import PArith.
-Local Open Scope positive_scope.
-Elpi Accumulate Db derive.tag.db.
-Elpi Accumulate File tag.
-Close Scope positive_scope.
 
 Elpi Accumulate File derive.
 

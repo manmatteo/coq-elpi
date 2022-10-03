@@ -6,10 +6,15 @@
 From elpi.apps Require Export derive.
 From elpi.apps Require Import
   derive.map
+  (*
   derive.lens
+  *)
   derive.lens_laws
+  (*
+  derive.tag
   derive.eqType_ast
   derive.fields
   derive.eqb
+  *)
   derive.eqbcorrect
 .
