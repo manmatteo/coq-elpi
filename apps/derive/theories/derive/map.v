@@ -9,7 +9,8 @@ From elpi Require Import elpi.
 From elpi.apps Require Import derive.
 
 (* Links the source and target type with the corresponding map function,
-   eg. "map-db (list A) (list B) (list_map f_A_B)" *)
+   eg. "map-db (list A) (list B) (list_map f_A_B)"
+*)
 Elpi Db derive.map.db lp:{{
   type map-db term -> term -> term -> prop.
 }}.

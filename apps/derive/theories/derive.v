@@ -70,8 +70,6 @@ From elpi.apps.derive Extra Dependency "eqK.elpi" as eqK.
 From elpi.apps.derive Extra Dependency "eqcorrect.elpi" as eqcorrect.
 From elpi.apps.derive Extra Dependency "eqOK.elpi" as eqOK.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
-From elpi.apps.derive Extra Dependency "lens.elpi" as lens.
-From elpi.apps.derive Extra Dependency "lens_laws.elpi" as lens_laws.
 
 From elpi.apps.derive Extra Dependency "tag.elpi" as tag.
 From elpi.apps.derive Extra Dependency "fields.elpi" as fields.
@@ -97,8 +95,6 @@ From elpi.apps Require Export
   derive.eqcorrect
   derive.eqOK
   derive.param2
-  derive.lens
-  derive.lens_laws
   derive.eqb_core_defs
   derive.tag
   derive.fields
@@ -157,10 +153,6 @@ Elpi Accumulate File eqOK.
 
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.
-
-Elpi Accumulate File lens.
-Elpi Accumulate Db derive.lens.db.
-Elpi Accumulate File lens_laws.
 
 Elpi Accumulate Db derive.eqType.db.
 Import PArith.

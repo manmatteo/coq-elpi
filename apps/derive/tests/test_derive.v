@@ -1,5 +1,4 @@
-From elpi.apps Require Import derive.
-From elpi.apps Require Import derive.map.
+From elpi.apps Require Import derive.std.
 
 From elpi.apps Require Import test_derive_stdlib.
 

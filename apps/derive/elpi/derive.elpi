@@ -2,7 +2,6 @@
 /* license: GNU Lesser General Public License Version 2.1 or later           */
 /* ------------------------------------------------------------------------- */
 
-dep1 "lens_laws" "lens".
 dep1 "eqOK" "eqcorrect".
 dep1 "eqOK" "param1_trivial".
 dep1 "param1_trivial" "param1_inhab".
@@ -44,8 +43,6 @@ derivation T Prefix (derive "eqOK"           (derive.eqOK.main T                
 derivation T Prefix (derive "param2"         (derive.param2.main (indt T)            N     )) :- N is Prefix ^ "_R".
 derivation T Prefix (derive "invert"         (derive.invert.main T                   N     )) :- N is Prefix ^ "inv".
 derivation T _      (derive "idx2inv"        (derive.idx2inv.main T                  "_to_")).
-derivation T Prefix (derive "lens"           (derive.lens.main T                     N     )) :- N is Prefix ^ "_".
-derivation T Prefix (derive "lens_laws"      (derive.lens-laws.main T                N     )) :- N is Prefix ^ "_".
 derivation T Prefix (derive "tag"            (derive.tag.main T                      Prefix)).
 derivation T _      (derive "eqType_ast"     (derive.eqType.ast.main T               )).
 derivation T Prefix (derive "fields"         (derive.fields.main T                   Prefix)).
