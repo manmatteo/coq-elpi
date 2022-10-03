@@ -6,4 +6,5 @@
 From elpi.apps Require Export derive.
 From elpi.apps Require Import
   derive.eqOK
-.   
+.
+Elpi Typecheck derive.

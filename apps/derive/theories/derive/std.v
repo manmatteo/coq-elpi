@@ -18,3 +18,4 @@ From elpi.apps Require Import
   *)
   derive.eqbcorrect
 .
+Elpi Typecheck derive.
