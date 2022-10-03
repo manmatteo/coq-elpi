@@ -79,6 +79,7 @@ From elpi.apps.derive Extra Dependency "eqb.elpi" as eqb.
 From elpi.apps.derive Extra Dependency "eqType.elpi" as eqType.
 From elpi.apps.derive Extra Dependency "eqbcorrect.elpi" as eqbcorrect.
 
+From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
 From elpi.apps.derive Extra Dependency "derive.elpi" as derive.
 
 From elpi.apps Require Export
@@ -106,6 +107,7 @@ From elpi.apps Require Export
 .
 
 Elpi Command derive.
+Elpi Accumulate File derive_hook.
 
 Elpi Accumulate Db derive.eq.db.
 Elpi Accumulate File eq.

@@ -2,12 +2,6 @@
 /* license: GNU Lesser General Public License Version 2.1 or later           */
 /* ------------------------------------------------------------------------- */
 
-pred derivation i:inductive, i:string, o:derive.
-pred export i:modpath.
-pred dep1 o:string, o:string.
-kind derive type.
-type derive string -> (A -> prop) -> derive.
-
 dep1 "lens_laws" "lens".
 dep1 "eqOK" "eqcorrect".
 dep1 "eqOK" "param1_trivial".
