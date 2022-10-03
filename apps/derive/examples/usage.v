@@ -2,7 +2,7 @@
    This example shows how to use derive
 *)
 
-From elpi.apps Require Import derive.std.
+From elpi.apps Require Import derive.std derive.legacy.
 Set Uniform Inductive Parameters.
 
 (** The basic invocation is with just one argument, the inductive
