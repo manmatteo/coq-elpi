@@ -22,7 +22,6 @@ derivation T Prefix (derive "induction"      (derive.induction.main T           
 derivation T Prefix (derive "eq"             (derive.eq.main T                       N     )) :- N is Prefix ^ "eq".
 derivation T Prefix (derive "eq_param1"      (derive.on_eq T (x\derive.param1.main (const x)) N     )) :- N is Prefix ^ "param1_".
 derivation T Prefix (derive "param2"         (derive.param2.main (indt T)            N     )) :- N is Prefix ^ "_R".
-derivation T Prefix (derive "invert"         (derive.invert.main T                   N     )) :- N is Prefix ^ "inv".
 
 namespace derive {
 

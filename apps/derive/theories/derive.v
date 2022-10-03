@@ -60,7 +60,6 @@ From elpi.apps.derive Extra Dependency "param1_functor.elpi" as param1_functor.
 From elpi.apps.derive Extra Dependency "param1_congr.elpi" as param1_congr.
 From elpi.apps.derive Extra Dependency "param1_inhab.elpi" as param1_inhab.
 From elpi.apps.derive Extra Dependency "param1_trivial.elpi" as param1_trivial.
-From elpi.apps.derive Extra Dependency "invert.elpi" as invert.
 From elpi.apps.derive Extra Dependency "induction.elpi" as induction.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
 
@@ -74,7 +73,6 @@ From elpi.apps Require Export
   derive.param1
   derive.param1_congr
   derive.param1_trivial
-  derive.invert
   derive.induction
   derive.param2
 .
@@ -105,9 +103,6 @@ Elpi Accumulate File param1_congr.
 Elpi Accumulate Db derive.param1.trivial.db.
 Elpi Accumulate File param1_inhab.
 Elpi Accumulate File param1_trivial.
-
-Elpi Accumulate Db derive.invert.db.
-Elpi Accumulate File invert.
 
 Elpi Accumulate Db derive.induction.db.
 Elpi Accumulate File induction.
