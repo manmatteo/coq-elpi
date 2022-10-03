@@ -1,5 +1,4 @@
-From elpi.apps Require Import derive.std.
-
+From elpi.apps Require Import derive.std derive.experimental.
 From elpi.apps Require Import test_derive_stdlib.
 
 Elpi derive Coverage.empty. 

@@ -5,6 +5,6 @@
 
 From elpi.apps Require Export derive.
 From elpi.apps Require Import
-  derive.invert
+  derive.idx2inv
 .
 Elpi Typecheck derive.

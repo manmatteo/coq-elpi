@@ -9,7 +9,6 @@ dep1 "param1_trivial" "param1".
 dep1 "param1_functor" "param1".
 dep1 "induction" "param1_functor".
 dep1 "induction" "param1_functor".
-dep1 "idx2inv" "invert".
 dep1 "eq_param1" "eq".
 
 derivation T Prefix (derive "isK"            (derive.isK.main T                      N     )) :- N is Prefix ^ "isk_".
@@ -24,7 +23,6 @@ derivation T Prefix (derive "eq"             (derive.eq.main T                  
 derivation T Prefix (derive "eq_param1"      (derive.on_eq T (x\derive.param1.main (const x)) N     )) :- N is Prefix ^ "param1_".
 derivation T Prefix (derive "param2"         (derive.param2.main (indt T)            N     )) :- N is Prefix ^ "_R".
 derivation T Prefix (derive "invert"         (derive.invert.main T                   N     )) :- N is Prefix ^ "inv".
-derivation T _      (derive "idx2inv"        (derive.idx2inv.main T                  "_to_")).
 
 namespace derive {
 
