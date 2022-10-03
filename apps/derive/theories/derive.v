@@ -73,7 +73,6 @@ From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
 
 From elpi.apps.derive Extra Dependency "tag.elpi" as tag.
 From elpi.apps.derive Extra Dependency "fields.elpi" as fields.
-From elpi.apps.derive Extra Dependency "eqb.elpi" as eqb.
 From elpi.apps.derive Extra Dependency "eqType.elpi" as eqType.
 
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
@@ -97,7 +96,6 @@ From elpi.apps Require Export
   derive.eqb_core_defs
   derive.tag
   derive.fields
-  derive.eqb
 .
 
 Elpi Command derive.
@@ -159,8 +157,6 @@ Elpi Accumulate Db derive.tag.db.
 Elpi Accumulate File tag.
 Elpi Accumulate Db derive.fields.db.
 Elpi Accumulate File fields.
-Elpi Accumulate Db derive.eqb.db.
-Elpi Accumulate File eqb.
 Elpi Accumulate File eqType.
 Close Scope positive_scope.
 

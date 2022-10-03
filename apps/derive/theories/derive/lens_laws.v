@@ -35,6 +35,7 @@ Register exchange_on as elpi.derive.lens.exchange_on.
 
 (* standalone *)
 Elpi Command derive.lens_laws.
+Elpi Accumulate File derive_hook.
 Elpi Accumulate File lens_laws.
 Elpi Accumulate Db derive.lens.db.
 Elpi Accumulate lp:{{ 
@@ -49,6 +50,8 @@ Elpi Typecheck.
 (* hook into derive *)
 Elpi Accumulate derive File lens_laws.
 Elpi Accumulate derive lp:{{
-  dep1 "lens_laws" "lens".
-  derivation T Prefix (derive "lens_laws" (derive.lens-laws.main T N)) :- N is Prefix ^ "_".
+  
+dep1 "lens_laws" "lens".
+derivation T Prefix (derive "lens_laws" (derive.lens-laws.main T N)) :- N is Prefix ^ "_".
+
 }}.

@@ -34,6 +34,7 @@ Ltac eqb_refl_on__solver :=
       
 (* standalone *)
 Elpi Command derive.eqbcorrect.
+Elpi Accumulate File derive_hook.
 Elpi Accumulate Db derive.eqType.db.
 Elpi Accumulate Db derive.tag.db.
 Elpi Accumulate Db derive.eqb.db.
