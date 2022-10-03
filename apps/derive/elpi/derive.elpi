@@ -38,7 +38,6 @@ derivation T Prefix (derive "param2"         (derive.param2.main (indt T)       
 derivation T Prefix (derive "invert"         (derive.invert.main T                   N     )) :- N is Prefix ^ "inv".
 derivation T _      (derive "idx2inv"        (derive.idx2inv.main T                  "_to_")).
 derivation T Prefix (derive "tag"            (derive.tag.main T                      Prefix)).
-derivation T _      (derive "eqType_ast"     (derive.eqType.ast.main T               )).
 
 namespace derive {
 

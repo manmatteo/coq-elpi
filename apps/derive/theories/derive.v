@@ -94,7 +94,6 @@ From elpi.apps Require Export
   derive.param2
   derive.eqb_core_defs
   derive.tag
-  derive.eqType_ast
 .
 
 Elpi Command derive.
@@ -149,12 +148,10 @@ Elpi Accumulate File eqOK.
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.
 
-Elpi Accumulate Db derive.eqType.db.
 Import PArith.
 Local Open Scope positive_scope.
 Elpi Accumulate Db derive.tag.db.
 Elpi Accumulate File tag.
-Elpi Accumulate File eqType.
 Close Scope positive_scope.
 
 Elpi Accumulate File derive.
