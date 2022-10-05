@@ -8,7 +8,7 @@ From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
   
 From elpi Require Import elpi.
 From elpi.apps Require Import derive.
-From elpi.apps Require Import  derive.eq derive.induction derive.eqK.
+From elpi.apps Require Import  derive.eq derive.induction derive.eqK derive.param1.
 
 From Coq Require Import ssreflect Uint63.
 

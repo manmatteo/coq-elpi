@@ -51,61 +51,29 @@
   A derivation different from d can be skipped [#[only(d)]] attribute.
 
 *)
-From elpi.apps.derive Extra Dependency "eq.elpi" as eq.
 From elpi.apps.derive Extra Dependency "isK.elpi" as isK.
 From elpi.apps.derive Extra Dependency "projK.elpi" as projK.
-From elpi.apps.derive Extra Dependency "paramX_lib.elpi" as paramX.
-From elpi.apps.derive Extra Dependency "param1.elpi" as param1.
-From elpi.apps.derive Extra Dependency "param1_functor.elpi" as param1_functor.
-From elpi.apps.derive Extra Dependency "param1_congr.elpi" as param1_congr.
-From elpi.apps.derive Extra Dependency "param1_inhab.elpi" as param1_inhab.
-From elpi.apps.derive Extra Dependency "param1_trivial.elpi" as param1_trivial.
-From elpi.apps.derive Extra Dependency "induction.elpi" as induction.
 From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
+From elpi.apps.derive Extra Dependency "paramX_lib.elpi" as paramX.
 
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
 From elpi.apps.derive Extra Dependency "derive.elpi" as derive.
 
 From elpi.apps Require Export
-  derive.eq
   derive.isK
   derive.projK
-  derive.param1
-  derive.param1_congr
-  derive.param1_trivial
-  derive.induction
   derive.param2
 .
 
 Elpi Command derive.
 Elpi Accumulate File derive_hook.
-
-Elpi Accumulate Db derive.eq.db.
-Elpi Accumulate File eq.
+Elpi Accumulate File paramX.
 
 Elpi Accumulate Db derive.isK.db.
 Elpi Accumulate File isK.
 
 Elpi Accumulate Db derive.projK.db.
 Elpi Accumulate File projK.
-
-Elpi Accumulate File paramX.
-
-Elpi Accumulate File param1.
-Elpi Accumulate Db derive.param1.db.
-
-Elpi Accumulate Db derive.param1.functor.db.
-Elpi Accumulate File param1_functor.
-
-Elpi Accumulate Db derive.param1.congr.db.
-Elpi Accumulate File param1_congr.
-
-Elpi Accumulate Db derive.param1.trivial.db.
-Elpi Accumulate File param1_inhab.
-Elpi Accumulate File param1_trivial.
-
-Elpi Accumulate Db derive.induction.db.
-Elpi Accumulate File induction.
 
 Elpi Accumulate File param2.
 Elpi Accumulate Db derive.param2.db.
