@@ -2,11 +2,6 @@
 /* license: GNU Lesser General Public License Version 2.1 or later           */
 /* ------------------------------------------------------------------------- */
 
-
-derivation T Prefix (derive "isK"            (derive.isK.main T                      N     )) :- N is Prefix ^ "isk_".
-derivation T Prefix (derive "projK"          (derive.projK.main T                    N     )) :- N is Prefix ^ "getk_".
-derivation T Prefix (derive "param2"         (derive.param2.main (indt T)            N     )) :- N is Prefix ^ "_R".
-
 namespace derive {
 
 pred if-verbose i:prop.

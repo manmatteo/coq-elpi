@@ -51,33 +51,14 @@
   A derivation different from d can be skipped [#[only(d)]] attribute.
 
 *)
-From elpi.apps.derive Extra Dependency "isK.elpi" as isK.
-From elpi.apps.derive Extra Dependency "projK.elpi" as projK.
-From elpi.apps.derive Extra Dependency "param2.elpi" as param2.
-From elpi.apps.derive Extra Dependency "paramX_lib.elpi" as paramX.
 
 From elpi.apps.derive Extra Dependency "derive_hook.elpi" as derive_hook.
 From elpi.apps.derive Extra Dependency "derive.elpi" as derive.
 
-From elpi.apps Require Export
-  derive.isK
-  derive.projK
-  derive.param2
-.
+From elpi Require Import elpi.
 
 Elpi Command derive.
 Elpi Accumulate File derive_hook.
-Elpi Accumulate File paramX.
-
-Elpi Accumulate Db derive.isK.db.
-Elpi Accumulate File isK.
-
-Elpi Accumulate Db derive.projK.db.
-Elpi Accumulate File projK.
-
-Elpi Accumulate File param2.
-Elpi Accumulate Db derive.param2.db.
-
 Elpi Accumulate File derive.
 
 Elpi Accumulate lp:{{
@@ -112,19 +93,3 @@ usage :-
 }}.
 Elpi Typecheck.
 Elpi Export derive.
-
-(* we derive the Coq prelude *)
-
-Module Prelude.
-Module Empty_set. derive Init.Datatypes.Empty_set "". End Empty_set.
-Module unit. derive Init.Datatypes.unit "". End unit.
-Module bool. derive Init.Datatypes.bool "". End bool.
-Module nat. derive Init.Datatypes.nat "". End nat.
-Module option. derive Init.Datatypes.option "". End option.
-Module sum. derive Init.Datatypes.sum "". End sum.
-Module prod. derive Init.Datatypes.prod "". End prod.
-Module list. derive Init.Datatypes.list "". End list.
-Module comparison. derive Init.Datatypes.comparison "". End comparison.
-End Prelude.
-
-Export Prelude.
