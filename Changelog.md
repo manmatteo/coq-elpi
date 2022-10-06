@@ -1,5 +1,10 @@
 # Changelog
 
+## UNRELEASED
+
+- Change `coq.env.global` now relates a term with a gref, instead of working one
+  way only
+  
 ## [1.15.6] - 27-08-2022
 
 Requires Elpi 1.16.5 and Coq 8.16.
