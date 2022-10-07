@@ -23,6 +23,7 @@ main I Prefix [CL] :- std.do! [
   std.assert! (eqcorrect-for (indt I) Correct Refl) "run eqbcorrect before",
 
   add-reflect TI (global (const Correct)) (global (const Refl)) Breflect,
+  coq.say {coq.term->string Breflect},
   std.assert-ok! (coq.typecheck Breflect Treflect) "fail demande a JC", 
   Namerf is Prefix ^ "eqb_OK",
   coq.env.add-const Namerf Breflect Treflect @opaque! Reflect,
