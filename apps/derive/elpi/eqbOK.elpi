@@ -1,3 +1,6 @@
+/* equality test soundness proof                                             */
+/* license: GNU Lesser General Public License Version 2.1 or later           */
+/* ------------------------------------------------------------------------- */
 namespace derive.eqbOK {
 
 pred add-reflect i:term, i:term, i:term, o:term.

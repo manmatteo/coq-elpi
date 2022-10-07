@@ -1,3 +1,7 @@
+/* eqType representation and validation                                      */
+/* license: GNU Lesser General Public License Version 2.1 or later           */
+/* ------------------------------------------------------------------------- */
+
 namespace derive.eqType.ast {
 
 pred translate-indt i:inductive, o:eqType, o:diagnostic.
