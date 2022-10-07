@@ -11,7 +11,7 @@ add-reflect (prod N T F) Correct Refl
 @pi-decl `H` {{ forall x1 x2, reflect (x1 = x2) (lp:eqA x1 x2)}} H\
 add-reflect (F a) 
     {{lp:Correct lp:a lp:eqA (fun (a1 a2 : lp:a) => @elimT (@eq lp:a a1 a2) (lp:eqA a1 a2) (lp:H a1 a2))}}
-    {{lp:Refl lp:a lp:eqA (fun (a1: lp:a) => @introT (@eq lp:a a1 a1) (lp:eqA a1 a1) (lp:H a1 a1) (@erefl lp:a a1))}}
+    {{lp:Refl lp:a lp:eqA (fun (a1: lp:a) => @introT (@eq lp:a a1 a1) (lp:eqA a1 a1) (lp:H a1 a1) (@refl_equal lp:a a1))}}
     (R a eqA H).
 
 add-reflect _T Correct Refl {{iffP2 lp:Correct lp:Refl}}.
@@ -20,7 +20,7 @@ pred main i:inductive, i:string, o:list prop.
 main I Prefix [CL] :- std.do! [
   coq.env.indt I _ _ _ TI _ _,
 
-  std.assert! (eqcorrect-for I Correct Refl) "run eqcorrect before",
+  std.assert! (eqcorrect-for (indt I) Correct Refl) "run eqbcorrect before",
 
   add-reflect TI (global (const Correct)) (global (const Refl)) Breflect,
   std.assert-ok! (coq.typecheck Breflect Treflect) "fail demande a JC", 

@@ -39,9 +39,7 @@ Elpi Db derive.eqb.db lp:{{
   
   eqb-for {{ PrimFloat.float }} {{ PrimFloat.float }} {{ PrimFloat.eqb }}.
   eqb-for {{ PrimInt63.int }} {{ PrimInt63.int }} {{ PrimInt63.eqb }}.
-  % eqb-for {{ @is_true lp:X }} {{ fun (_ _ : @is_true lp:X) => true }}.
-  % eqb-for {{ @eq bool lp:X true }} {{ fun (_ _ : @eq bool lp:X true) => true }}.
-     /* Generalize over bool and true, have a list of uip, i.e use  eqcorrect-for */ 
+
   eqb-for T1 T2 X :- whd1 T1 T1', !, eqb-for T1' T2 X. 
   eqb-for T1 T2 X :- whd1 T2 T2', !, eqb-for T1 T2' X. 
   

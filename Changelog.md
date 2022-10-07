@@ -1,5 +1,13 @@
 # Changelog
 
+## UNRELEASED
+
+### APPS
+- Change `derive` usage.
+  One should now import `From elpi.apps Require Import derive.std`
+- Change derivations `eq` and `eqOK` move to `derive.legacy`
+- New derivations `eqb` and `eqbOK` subsuming the previous ones
+
 ## [1.15.6] - 27-08-2022
 
 Requires Elpi 1.16.5 and Coq 8.16.
