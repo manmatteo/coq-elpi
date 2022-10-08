@@ -3,6 +3,7 @@ From elpi.apps Require Import derive.eqbOK.
 From elpi.apps.derive.tests Require Import test_derive_stdlib test_eqb test_eqbcorrect.
 
 Import test_derive_stdlib.Coverage 
+       test_eqType_ast.Coverage
        test_eqb.Coverage
        test_eqbcorrect.Coverage.
 
@@ -38,12 +39,6 @@ Elpi derive.eqbOK enum.
 Fail Elpi derive.eqbOK eq.
 Elpi derive.eqbOK bool.
 Elpi derive.eqbOK sigma_bool.
-
-Check fun (a : peano) (eqA : eq_test2 a a)
-(H : forall (x1 : _) (x2 : _), Bool.reflect (x1 = x2) (eqA x1 x2)) =>
-eqb_core_defs.iffP2
-(ord_eqb_correct a eqA (fun a1 a2 : a => ssrbool.elimT (H a1 a2)))
-(ord_eqb_refl a eqA (fun a1 : a => ssrbool.introT (H a1 a1) eq_refl))
 Elpi derive.eqbOK ord.
 Elpi derive.eqbOK ord2.
 Elpi derive.eqbOK val.
@@ -52,4 +47,6 @@ End Coverage.
 
 Import Coverage.
 
-Check peano_eqb_OK : forall n m, reflect (n = m) (peano_eqb n m).
+Check peano_eqb_OK : forall n m, Bool.reflect (n = m) (peano_eqb n m).
+Check seq_eqb_OK : forall A eqA (h : forall a1 a2 : A, Bool.reflect (a1 = a2) (eqA a1 a2)) l1 l2, Bool.reflect (l1 = l2) (seq_eqb A eqA l1 l2).
+Check ord_eqb_OK : forall n (o1 o2 : ord n), Bool.reflect (o1 = o2) (ord_eqb n n o1 o2).
