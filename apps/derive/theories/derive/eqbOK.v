@@ -4,7 +4,7 @@
    ------------------------------------------------------------------------- *)
    
 Require Import eqb_core_defs.
-Require Import tag fields eqb eqbcorrect derive.
+Require Import tag eqType_ast fields eqb eqbcorrect derive.
 
 From elpi.apps.derive Extra Dependency "eqbOK.elpi" as eqbOK.
 From elpi.apps.derive Extra Dependency "eqType.elpi" as eqType.
@@ -49,6 +49,6 @@ Elpi Accumulate derive Db derive.eqbOK.db.
 Elpi Accumulate derive lp:{{
 
 dep1 "eqbOK" "eqbcorrect".
-derivation T Prefix (derive "eqbOK" (derive.eqbOK.main T Prefix)).
+derivation (indt T) Prefix (derive "eqbOK" (derive.eqbOK.main T Prefix)).
 
 }}.

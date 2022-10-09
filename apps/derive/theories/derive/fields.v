@@ -81,6 +81,6 @@ Elpi Accumulate derive lp:{{
   
 dep1 "fields" "tag".
 dep1 "fields" "eqType_ast".
-derivation T Prefix (derive "fields" (derive.fields.main T Prefix)).
+derivation (indt T) Prefix (derive "fields" (derive.fields.main T Prefix)).
 
 }}.

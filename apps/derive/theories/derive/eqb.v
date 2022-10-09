@@ -78,6 +78,6 @@ Elpi Accumulate derive File eqb.
 Elpi Accumulate derive lp:{{
 
 dep1 "eqb" "fields".
-derivation T Prefix (derive "eqb" (derive.eqb.main T Prefix)).
+derivation (indt T) Prefix (derive "eqb" (derive.eqb.main T Prefix)).
 
 }}.
