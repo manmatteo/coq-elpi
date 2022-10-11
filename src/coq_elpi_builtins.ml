@@ -1826,12 +1826,12 @@ Supported attributes:
      if not (is_mutual_inductive_entry_ground me sigma) then
        err Pp.(str"coq.env.add-indt: the inductive type declaration must be ground. Did you forge to call coq.typecheck-indt-decl?");
      let primitive_expected = match record_info with Some(p, _) -> p | _ -> false in
-     let ubinders = 
+     let ubinders, _poly, uentry = 
        let open Entries in
        match me.mind_entry_universes with
-       | Monomorphic_ind_entry -> (UState.Monomorphic_entry uctx, univ_binders)
+       | Monomorphic_ind_entry -> (UState.Monomorphic_entry uctx, univ_binders), false, (Monomorphic_entry,univ_binders)
        | Template_ind_entry _ -> nYI "template polymorphic inductives"
-       | Polymorphic_ind_entry uctx -> (UState.Polymorphic_entry uctx, univ_binders)
+       | Polymorphic_ind_entry uctx -> (UState.Polymorphic_entry uctx, univ_binders), true, (Polymorphic_entry uctx,univ_binders)
        in
      let () = DeclareUctx.declare_universe_context ~poly:false uctx in
      let mind =
@@ -1854,7 +1854,7 @@ Supported attributes:
          let fields_as_relctx = Term.prod_assum k_ty in
          let projections =
            Record.Internal.declare_projections ind ~kind:Decls.Definition
-             (Entries.Monomorphic_entry, UnivNames.empty_binders)
+             uentry (*(Entries.Monomorphic_entry, UnivNames.empty_binders)*)
              (Names.Id.of_string "record")
              flags is_implicit fields_as_relctx
          in
