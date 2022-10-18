@@ -145,7 +145,7 @@ VERNAC COMMAND EXTEND Elpi CLASSIFIED AS SIDEFF
 | [ "Elpi" "Printer" string(s) ] -> { EV.load_printer s }
 | [ "Elpi" "Template" "Command" string(s) ] -> { EV.load_command s }
 | [ "Elpi" "Template" "Tactic" string(s) ] -> { EV.load_tactic s }
-| [ "Elpi" "Coercions" "On"] -> { EV.load_coercions ()}
+| [ "Elpi" "Coercions" qualified_name(d)] -> { EV.load_coercions d}
 
 END
 

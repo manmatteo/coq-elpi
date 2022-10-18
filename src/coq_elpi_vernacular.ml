@@ -479,6 +479,25 @@ let accumulate_to_db p v vs ~scope =
     CErrors.user_err Pp.(str "No Elpi Db " ++ pr_qualified_name p);
   add_to_db p v vs scope
 
+(* Working on coercions *)
+  
+let load_coercions d =
+  let elpi = ensure_initialized () in
+  let ast = Database d in
+  lp_command_ast := Some ast;
+  Lib.add_anonymous_leaf (in_lp_command_src ast)
+  let f =
+     run_in_program ~program:(snd p)
+  in
+  Coercion.set_f f
+
+let accumulate_coercion (loc,s) =
+  let elpi = ensure_initialized () in
+  let new_ast = unit_from_string ~elpi loc s in
+  if db_exists "coercions" then accumulate_coercion new_ast
+  else CErrors.user_err
+    Pp.(str "Elpi coercions are not initialized " ++  str" not found")
+
 end
 
 open Programs
@@ -855,7 +874,3 @@ let skip ~atts:(skip,only) f x =
   in
     if exec then f x else ()
 
-let load_coercions () =
-  print_string "Spara!";
-  Coercion.set_f (fun x -> print_int x; x);
-  ()
